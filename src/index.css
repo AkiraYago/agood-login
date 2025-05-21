@@ -1,0 +1,167 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Primary palette around #673DE6 */
+  --primary: #673DE6;
+  --primary-foreground: #ffffff;
+  --primary-light: #8f6ff8;
+  --primary-dark: #4b28b6;
+
+  /* Secondary and accent colors (lighter/darker variations) */
+  --secondary: #a992fa;
+  --secondary-foreground: #2d186a;
+  --accent: #bba6f7;
+  --accent-foreground: #3d217e;
+
+  /* Muted and neutral */
+  --muted: #ede9fe;
+  --muted-foreground: #6d6d6d;
+
+  /* Destructive (red) */
+  --destructive: #e66464;
+  --destructive-foreground: #fff;
+
+  /* Backgrounds and surfaces */
+  --background: #f7f6fd;
+  --foreground: #2d186a;
+  --card: #fff;
+  --card-foreground: #2d186a;
+  --popover: #fff;
+  --popover-foreground: #2d186a;
+
+  /* Borders and rings */
+  --border: #d1c4e9;
+  --input: #ede9fe;
+  --ring: #bba6f7;
+
+  /* Example chart colors */
+  --chart-1: #673DE6;
+  --chart-2: #a992fa;
+  --chart-3: #ede9fe;
+  --chart-4: #e66464;
+  --chart-5: #bba6f7;
+
+  /* Sidebar */
+  --sidebar: #ede9fe;
+  --sidebar-foreground: #2d186a;
+  --sidebar-primary: #673DE6;
+  --sidebar-primary-foreground: #fff;
+  --sidebar-accent: #a992fa;
+  --sidebar-accent-foreground: #2d186a;
+  --sidebar-border: #d1c4e9;
+  --sidebar-ring: #bba6f7;
+}
+
+.dark {
+  --background: #2d186a;
+  --foreground: #ede9fe;
+  --card: #3d217e;
+  --card-foreground: #ede9fe;
+  --popover: #3d217e;
+  --popover-foreground: #ede9fe;
+
+  --primary: #8f6ff8;
+  --primary-foreground: #2d186a;
+  --primary-light: #bba6f7;
+  --primary-dark: #673DE6;
+
+  --secondary: #4b28b6;
+  --secondary-foreground: #ede9fe;
+  --accent: #a992fa;
+  --accent-foreground: #2d186a;
+
+  --muted: #3d217e;
+  --muted-foreground: #bba6f7;
+
+  --destructive: #e66464;
+  --destructive-foreground: #fff;
+
+  --border: #4b28b6;
+  --input: #3d217e;
+  --ring: #8f6ff8;
+
+  --chart-1: #8f6ff8;
+  --chart-2: #a992fa;
+  --chart-3: #ede9fe;
+  --chart-4: #e66464;
+  --chart-5: #bba6f7;
+
+  --sidebar: #3d217e;
+  --sidebar-foreground: #ede9fe;
+  --sidebar-primary: #8f6ff8;
+  --sidebar-primary-foreground: #2d186a;
+  --sidebar-accent: #a992fa;
+  --sidebar-accent-foreground: #2d186a;
+  --sidebar-border: #4b28b6;
+  --sidebar-ring: #8f6ff8;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply font-bold text-3xl md:text-4xl leading-tight;
+  }
+  h2 {
+    @apply font-semibold text-2xl md:text-4xl 2xl:text-5xl leading-snug;
+  }
+  h3 {
+    @apply font-semibold text-xl md:text-3xl 2xl:text-4xl leading-snug;
+  }
+  h4 {
+    @apply font-medium text-lg md:text-2xl 2xl:text-3xl leading-normal;
+  }
+  h5 {
+    @apply font-medium text-base md:text-lg 2xl:text-xl leading-normal;
+  }
+  h6 {
+    @apply font-medium text-sm md:text-base 2xl:text-lg leading-normal;
+  }
+}
