@@ -5,6 +5,7 @@ import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Role from "./pages/Role"
 import Interests from "./pages/Interests"
+import Location from "./pages/Location"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signup" element={<Signup />}>
           <Route index element={<Role />} />
           <Route path="interests" element={<Interests />} />
+          <Route path="location" element={<Location />} />
         </Route>
       </Routes>
     </BrowserRouter>
