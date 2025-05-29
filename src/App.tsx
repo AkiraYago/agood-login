@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Role from "./pages/Role"
+import Interests from "./pages/Interests"
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />}>
           <Route index element={<Role />} />
-          {/* <Route path="interests" element={<Interests />} /> */}
+          <Route path="interests" element={<Interests />} />
         </Route>
       </Routes>
     </BrowserRouter>
